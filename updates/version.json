@@ -1,8 +1,9 @@
 {
   "Stable": {
-    "VersionCode": 64,
+    "VersionCode": 99,
     "VersionName": "V2.1.4",
     "DownloadURL": "https://github.com"
   },
-  "Beta": false
+  "Beta": false,
+  "inherit": true
 }
