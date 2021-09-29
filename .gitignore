@@ -2,7 +2,6 @@
 !.gitignore
 !updates
 !updates/*
-
 #*.iml
 #.gradle
 #/local.properties
