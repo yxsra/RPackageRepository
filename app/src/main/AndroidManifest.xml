@@ -1,6 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="com.yxer.uid.shared"
     package="com.yxer.rpackagerepository">
+<!--    coreApp="true"-->
+
+<!--    <uses-feature-->
+<!--        android:name="android.software.leanback"-->
+<!--        android:required="false" />-->
+<!--    <uses-feature-->
+<!--        android:name="android.hardware.touchscreen"-->
+<!--        android:required="false" />-->
+
+    <!-- 拥有完全的网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!--    所有文件-->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--    内容提供程序 用户字典提供程序 检索数据  -->
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <!--   内容提供程序 用户字典提供程序  用于插入、更新或删除数据-->
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+
+    <!--    前台服务-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!--    系统启动完毕后收到一条系统的广播，这个广播的标志为 ACTION_BOOT_COMPLETED-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <!--    请求删除包-->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <!--    请求安装包-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 读取安装会话 -->
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS" />
+
+
+    <!--    请求忽略电池优化-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <!--    唤醒锁定-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--    访问所有下载-->
+    <uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS" />
+
+
+
+    <!--       &lt;!&ndash;获取Activity任务栈 权限 &ndash;&gt;-->
+    <!--       <uses-permission android:name="android.permission.GET_TASKS" />-->
+
+
+
+
+    <!--    <uses-permission android:name="android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY"-->
+    <!--        tools:ignore="ProtectedPermissions" />-->
+
+
+    <!--    安装包-->
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <!--    删除包-->
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+
+
+    <uses-permission android:name="android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_USERS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REVOKE_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_APP_OPS_MODES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.KILL_UID"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_APP_OPS_RESTRICTIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.USE_RESERVED_DISK"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_INSTANT_APPS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <uses-permission
+        android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+
+
+
+    <uses-permission android:name="packageinstaller.permission.MANAGER" />
+    <uses-permission android:name="ro.permission.API_V1"
+        tools:node="remove" />
+
+
+    <permission
+        android:name="packageinstaller.permission.MANAGER"
+        android:protectionLevel="signature" />
+
+    <permission
+        android:name="ro.permission.API_V1"
+        android:protectionLevel="signature" />
+
+
+    <!--    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />-->
+
+
+
+    <!--    声明要交互所有的app-->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <!--    https://www.jianshu.com/p/d1ccd425c4ce-->
+    <queries>
+        <package android:name="moe.shizuku.privileged.api"/>
+        <!--        <package android:name="com.drakeet.years"/>-->
+    </queries>
+
+
 
     <application
         android:allowBackup="true"
