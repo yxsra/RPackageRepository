@@ -1,1 +1,6 @@
 /build
+*.jks
+/signing.properties
+/.cxx
+/release
+/debug
